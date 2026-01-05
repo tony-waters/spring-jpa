@@ -1,2 +1,2 @@
 # spring-jpa
-basic JPA with spring
+What can latest Spring Boot do with JPA
