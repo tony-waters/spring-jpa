@@ -34,6 +34,20 @@ public class SpringJpaApplication {
 			List<Customer> customers = (List<Customer>) repository.findAll();
 			logger.info(customers.toString());
 			logger.info("");
+
+			// fetch customer by id
+			logger.info("Customers found with findById(1L)");
+			logger.info("------------------------------");
+			Customer customer = repository.findById(1L);
+			logger.info(customer.toString());
+			logger.info("");
+
+			// fetch customer by last name
+			logger.info("Customers found with findByLastName(String)");
+			logger.info("------------------------------");
+			customers = repository.findByLastName("Waters");
+			logger.info(customers.toString());
+			logger.info("");
 		};
 	}
 
